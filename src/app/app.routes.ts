@@ -11,4 +11,8 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./folder/folder.page').then((m) => m.FolderPage),
   },
+  {
+    path: 'form-tickets',
+    loadComponent: () => import('./form-tickets/form-tickets.page').then( m => m.FormTicketsPage)
+  },
 ];

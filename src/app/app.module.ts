@@ -6,13 +6,13 @@ import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
 
 
 
-
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+
 
   ]
 })
