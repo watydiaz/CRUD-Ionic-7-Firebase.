@@ -17,10 +17,21 @@ import { PostService } from '../post.service';
   imports: [IonicModule, CommonModule, FormsModule]
 })
 export class ShowPage implements OnInit {
+  Posts: Post[]
 
-  constructor() { }
+  constructor( private postService: PostService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.postService.getPosts().subscribe((res) =>{
+      this.Posts = res.map((e) => {
+        return {
+          id: e.payload.doc.id,
+          ...(e.payload.doc.data() as Post)
+        }
+      });
+    });
   }
+//Delete Post
+  deleteRow = (post) => this.postService.deletePost(post);
 
 }

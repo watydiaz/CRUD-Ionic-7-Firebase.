@@ -3,23 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  firebase: {
-    projectId: 'crud-incidencias',
-    appId: '1:900880523164:web:584e3eaaa8c0fefbfcb259',
-    storageBucket: 'crud-incidencias.appspot.com',
-    apiKey: 'AIzaSyDCmrMhksYqjSghcobrU8qJHRApX5MUgL4',
-    authDomain: 'crud-incidencias.firebaseapp.com',
-    messagingSenderId: '900880523164',
-  },
-  production: false,
-  firebaseConfig : {
-    apiKey: "AIzaSyDCmrMhksYqjSghcobrU8qJHRApX5MUgL4",
-    authDomain: "crud-incidencias.firebaseapp.com",
-    projectId: "crud-incidencias",
-    storageBucket: "crud-incidencias.appspot.com",
-    messagingSenderId: "900880523164",
-    appId: "1:900880523164:web:584e3eaaa8c0fefbfcb259"
-  }
+    production: true,
+    firebaseConfig : {
+      apiKey: "AIzaSyBuGzv8hlhvMwATCOCyqsW7Q7dYLXQgX8o",
+      authDomain: "crud-pruebas-20e6e.firebaseapp.com",
+      projectId: "crud-pruebas-20e6e",
+      storageBucket: "crud-pruebas-20e6e.appspot.com",
+      messagingSenderId: "986251750313",
+      appId: "1:986251750313:web:180379953506dffc9af2b8"
+    }
 };
 
 /*
@@ -29,4 +21,4 @@ export const environment = {
  * This import should be commented out in production mode because it will have a negative impact
  * on performance if an error is thrown.
  */
-// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+import 'zone.js/plugins/zone-error';  // Included with Angular CLI.

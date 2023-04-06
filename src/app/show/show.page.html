@@ -20,13 +20,13 @@
     </thead>
 
     <tbody>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+      <tr *ngFor="let post of Posts">
+        <td>{{post.title}} </td>
+        <td>{{post.content}} </td>
+        <td>{{post.author}} </td>
         <td>
-          <button class="btn btn-outline-secondary"><ion-icon name="create-outline"></ion-icon></button>
-          <button class="btn btn-outline-danger"><ion-icon name="trash-outline"></ion-icon></button>
+          <!-- <button class="btn btn-outline-secondary" routerLink="/edit/{{post.id}} "><ion-icon name="create-outline"></ion-icon></button> -->
+          <button class="btn btn-outline-danger" (onclick)="deleteRow(post)"><ion-icon name="trash-outline"></ion-icon></button>
         </td>
       </tr>
     </tbody>
