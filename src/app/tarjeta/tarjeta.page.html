@@ -1,0 +1,66 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Tarjeta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h3>Crear Tarjeta</h3>
+        <form (ngSubmit)="onSubmit()" [formGroup]="createForm">
+          <ion-item>
+            <ion-label position="floating">Titular</ion-label>
+            <ion-input type="text" formControlName="titular"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Número de tarjeta</ion-label>
+            <ion-input type="text" formControlName="numeroTarjeta"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Fecha de vencimiento</ion-label>
+            <ion-input type="text" formControlName="fechaVencimiento"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="floating">Codigo CVV</ion-label>
+            <ion-input type="text" formControlName="cvv"></ion-input>
+          </ion-item>
+
+          <ion-button type="submit" expand="block">Crear tarjeta</ion-button>
+        </form>
+
+      </ion-col>
+      <ion-col>
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>
+              Listar Tarjetas Creadas
+            </ion-title>
+          </ion-toolbar>
+        </ion-header>
+
+        <ion-content>
+          <ion-list>
+            <ion-item lines="none">
+              <ion-label>Nombre</ion-label>
+              <ion-label>Número Tarjeta</ion-label>
+              <ion-label>Vencimiento</ion-label>
+              <ion-label>Cvv</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>{{createForm.value.titular }}</ion-label>
+              <ion-label>{{createForm.value.numeroTarjeta }}</ion-label>
+              <ion-label>{{createForm.value.fechaVencimiento }}</ion-label>
+              <ion-label>{{createForm.value.cvv }}</ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-content>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

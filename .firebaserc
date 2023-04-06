@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "crud-incidencias"
+  },
+  "targets": {
+    "crud-incidencias": {
+      "hosting": {
+        "app": [
+          "crud-incidencias"
+        ]
+      }
+    }
+  }
+}

@@ -9,7 +9,7 @@ export class FirestoreService {
   constructor( public database:AngularFirestore) { }
   //aqui van las funciones q tienen q ver con la base de datos
 
-  //CRUD CFREATE, READ, UPDATE, ELIMINATE.
+  //CRUD CFREATE, READ, UPDATE, ELIMINATE. CREACION DE METODOS
 
   //CREATE
   createDoc(data: any, path: string, id: string) {

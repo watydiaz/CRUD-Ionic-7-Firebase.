@@ -1,18 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AngularFireModule } from "@angular/fire/compat";
-import { environment } from 'src/environments/environment';
-import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
+import { AngularFirestoreModule,  } from "@angular/fire/compat/firestore";
+import { environment } from '../environments/environment';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { TarjetaPipe } from './tarjeta.pipe';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { Firestore, collection, collectionData } from '@angular/fire/firestore';
+
+
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    TarjetaPipe
+  ],
   imports: [
     CommonModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
-
+    provideFirestore(() => getFirestore()),
+    ReactiveFormsModule,
 
   ]
 })
