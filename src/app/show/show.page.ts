@@ -5,6 +5,8 @@ import { IonicModule } from '@ionic/angular';
 //Importacion de modelo de datos
 import Post from '../post.model';
 import { PostService } from '../post.service';
+
+
 //Servicio Post
 
 
@@ -14,13 +16,15 @@ import { PostService } from '../post.service';
   templateUrl: './show.page.html',
   styleUrls: ['./show.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+  imports: [IonicModule, CommonModule, FormsModule],
+
 })
 export class ShowPage implements OnInit {
   Posts: Post[]
 
   constructor( private postService: PostService) { }
 
+  // Se crean los metodos para conectar con la base de datos Firebase, hay un error en la conexion, pendiente por resolver.
   ngOnInit(): void {
     this.postService.getPosts().subscribe((res) =>{
       this.Posts = res.map((e) => {

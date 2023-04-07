@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+
 //importando modulos para trabajar con firestore
 
 import { AngularFirestore } from '@angular/fire/compat/firestore';
@@ -55,7 +56,7 @@ export class PostService {
       author: post.author
     });
   }
-  //Eliminar DElete
+  //Eliminar Delete
   deletePost(post){
     return this.angularFirestore
     .collection("posts")

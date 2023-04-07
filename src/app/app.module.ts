@@ -22,7 +22,9 @@ import { Firestore, collection, collectionData } from '@angular/fire/firestore';
     AngularFirestoreModule,
     provideFirestore(() => getFirestore()),
     ReactiveFormsModule,
+    
+  ],
 
-  ]
+
 })
 export class AppModule { }
